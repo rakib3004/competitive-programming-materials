@@ -5,18 +5,16 @@ using namespace std;
 int main()
 {
 
-    int n,a,b,max1,max2,result;
-    scanf("%d",&n);
-    scanf("%d",&a);
-    scanf("%d",&b);
+  long long int  capital =0;
 
+  cin>>capital;
+  long double  primary=100;
 
-   max1=n*a;
-   max2=b;
+ long double rate = 1.01;
 
-    result = min(max1,max2);
+ long double ratio = (double)(capital/primary);
 
+cout<<ceil((log10(ratio))/(log10(rate)))<<endl;
 
-    cout<<result;
-    return 0;
+return 0;
 }
