@@ -46,7 +46,7 @@ int main()
 
     int i,j;
 
-
+        x=x*100;
     for(i=0;i<n;i++){
 
     scanf("%d",&volummm[i]);
@@ -56,7 +56,7 @@ int main()
 
 
      for(i=0;i<n;i++){
-            perUnitConsume = (double)(volummm[i]*percentage[i])/100;
+            perUnitConsume = (volummm[i]*percentage[i]);
 
         totalConsume = totalConsume+ perUnitConsume;
       //  cout<<"Amount: "<<totalConsume<<endl;
