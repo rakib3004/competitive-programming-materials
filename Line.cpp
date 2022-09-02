@@ -5,42 +5,52 @@ using namespace std;
 void test()
 {
 
-    int lineCount=0;
+    long long int lineCount=0;
 
 
-    int n;
+    long long    int n;
 
 
     cin>>n;
 
     string lineArray;
 
-    int distance[n]= {0}
+    long long int distance[n]= {0};
 
-                     cin>>lineArray;
+    cin>>lineArray;
 
-    int i;
+    long longint i;
 
     for(i=0; i<n; i++)
     {
         if(lineArray[i]=='L')
         {
-            d[i]=i;
+            distance[i]=i;
         }
         else
         {
-            d[i]=n-1-i;
+            distance[i]=n-1-i;
         }
-
+        lineCount+=distance[i];
     }
     sort(distance,distance+n);
 
-
+    long long  int checkDissimilarity=0;
     for(i=0; i<n; i++)
     {
+        checkDissimilarity= n-1-(2*distance[i]);
+
+        if(checkDissimilarity>0)
+        {
+            lineCount+=checkDissimilarity;
+        }
+        cout<<lineCount<<" ";
+    }
 
 
-    } return;
+    cout<<endl;
+    return;
+
 
 }
 int main()
