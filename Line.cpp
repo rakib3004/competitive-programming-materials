@@ -19,7 +19,7 @@ void test()
 
     cin>>lineArray;
 
-    long longint i;
+    long long int i;
 
     for(i=0; i<n; i++)
     {
